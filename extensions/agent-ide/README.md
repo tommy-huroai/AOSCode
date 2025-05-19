@@ -15,3 +15,10 @@ Each agent currently displays an informational message. The agents are:
 
 This extension is intended as a proof of concept for using multiple agents
 to automate the development process.
+
+## Chat Panel
+
+Use the `Agent IDE: Open Agent Chat` command to open a chat panel. Enter a
+prompt describing your coding or app request and the six agents will sequentially
+process it using your local Ollama models. Responses from each agent appear in the
+panel.
