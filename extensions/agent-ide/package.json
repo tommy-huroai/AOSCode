@@ -1,0 +1,26 @@
+{
+  "name": "agent-ide",
+  "displayName": "Agent IDE",
+  "description": "Demonstration extension with agent-based development cycle",
+  "version": "0.0.1",
+  "publisher": "vscode",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onCommand:agentIDE.startDevelopmentCycle"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "agentIDE.startDevelopmentCycle",
+        "title": "Start Agent Development Cycle"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "gulp compile-extension:agent-ide",
+    "watch": "gulp watch-extension:agent-ide"
+  }
+}
