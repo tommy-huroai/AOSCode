@@ -8,7 +8,8 @@
     "vscode": "^1.70.0"
   },
   "activationEvents": [
-    "onCommand:agentIDE.startDevelopmentCycle"
+    "onCommand:agentIDE.startDevelopmentCycle",
+    "onCommand:agentIDE.openChat"
   ],
   "main": "./out/extension",
   "contributes": {
@@ -16,6 +17,10 @@
       {
         "command": "agentIDE.startDevelopmentCycle",
         "title": "Start Agent Development Cycle"
+      },
+      {
+        "command": "agentIDE.openChat",
+        "title": "Open Agent Chat"
       }
     ]
   },

@@ -1,0 +1,18 @@
+body {
+    font-family: sans-serif;
+    padding: 10px;
+}
+#messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+#form {
+    display: flex;
+}
+#prompt {
+    flex: 1;
+    margin-right: 5px;
+}

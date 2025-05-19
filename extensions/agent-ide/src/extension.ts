@@ -3,6 +3,7 @@
  * development cycle consisting of six agents.
  *--------------------------------------------------------*/
 import * as vscode from 'vscode';
+import { ChatPanel } from './chatPanel';
 
 interface Agent {
     name: string;
@@ -69,6 +70,12 @@ export function activate(context: vscode.ExtensionContext): void {
     });
 
     context.subscriptions.push(startCommand);
+
+    const chatCommand = vscode.commands.registerCommand('agentIDE.openChat', () => {
+        ChatPanel.createOrShow(context.extensionUri);
+    });
+
+    context.subscriptions.push(chatCommand);
 }
 
 export function deactivate(): void {
