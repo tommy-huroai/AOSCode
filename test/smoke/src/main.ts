@@ -191,8 +191,8 @@ if (!opts.web) {
 		process.env.VSCODE_CLI = '1';
 	}
 
-	if (!fs.existsSync(electronPath || '')) {
-		fail(`Cannot find VSCode at ${electronPath}. Please run VSCode once first (scripts/code.sh, scripts\\code.bat) and try again.`);
+        if (!fs.existsSync(electronPath || '')) {
+                fail(`Cannot find AOSCode at ${electronPath}. Please run AOSCode once first (scripts/code.sh, scripts\\code.bat) and try again.`);
 	}
 
 	quality = parseQuality();
@@ -229,7 +229,7 @@ else {
 	quality = parseQuality();
 }
 
-logger.log(`VS Code product quality: ${quality}.`);
+logger.log(`AOSCode product quality: ${quality}.`);
 
 const userDataDir = path.join(testDataPath, 'd');
 
@@ -279,7 +279,7 @@ async function ensureStableCode(): Promise<void> {
 			throw new Error(`Could not find suitable stable version for ${version}`);
 		}
 
-		logger.log(`Found VS Code v${version}, downloading previous VS Code version ${stableVersion}...`);
+                logger.log(`Found AOSCode v${version}, downloading previous AOSCode version ${stableVersion}...`);
 
 		let lastProgressMessage: string | undefined = undefined;
 		let lastProgressReportedAt = 0;
@@ -319,13 +319,13 @@ async function ensureStableCode(): Promise<void> {
 			// Visual Studio Code.app/Contents/MacOS/Electron
 			stableCodePath = path.dirname(path.dirname(path.dirname(stableCodeExecutable)));
 		} else {
-			// VSCode/Code.exe (Windows) | VSCode/code (Linux)
-			stableCodePath = path.dirname(stableCodeExecutable);
+                       // AOSCode/Code.exe (Windows) | AOSCode/code (Linux)
+                       stableCodePath = path.dirname(stableCodeExecutable);
 		}
 	}
 
-	if (!fs.existsSync(stableCodePath)) {
-		throw new Error(`Cannot find Stable VSCode at ${stableCodePath}.`);
+       if (!fs.existsSync(stableCodePath)) {
+               throw new Error(`Cannot find Stable AOSCode at ${stableCodePath}.`);
 	}
 
 	logger.log(`Using stable build ${stableCodePath} for migration tests`);
@@ -348,7 +348,7 @@ async function setup(): Promise<void> {
 
 // Before all tests run setup
 before(async function () {
-	this.timeout(5 * 60 * 1000); // increase since we download VSCode
+       this.timeout(5 * 60 * 1000); // increase since we download AOSCode
 
 	this.defaultOptions = {
 		quality,
@@ -395,7 +395,7 @@ after(async function () {
 	}
 });
 
-describe(`VSCode Smoke Tests (${opts.web ? 'Web' : 'Electron'})`, () => {
+describe(`AOSCode Smoke Tests (${opts.web ? 'Web' : 'Electron'})`, () => {
 	if (!opts.web) { setupDataLossTests(() => opts['stable-build'] /* Do not change, deferred for a reason! */, logger); }
 	setupPreferencesTests(logger);
 	setupSearchTests(logger);
