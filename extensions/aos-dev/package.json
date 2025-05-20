@@ -1,0 +1,31 @@
+{
+  "name": "aos-dev",
+  "displayName": "AOSDev Tools",
+  "description": "Agentic development workflow integration for AOSCode",
+  "version": "0.0.1",
+  "publisher": "aos",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onCommand:aosDev.openPanel",
+    "onCommand:aosDev.createAgent"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aosDev.openPanel",
+        "title": "AOSDev: Open Panel"
+      },
+      {
+        "command": "aosDev.createAgent",
+        "title": "AOSDev: Create Agent"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "gulp compile-extension:aos-dev",
+    "watch": "gulp watch-extension:aos-dev"
+  }
+}

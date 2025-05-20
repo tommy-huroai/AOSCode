@@ -28,6 +28,7 @@ const ext = require('./lib/extensions');
 // 	ignore: ['**/out/**', '**/node_modules/**']
 // });
 const compilations = [
+        'extensions/aos-dev/tsconfig.json',
         'extensions/agent-ide/tsconfig.json',
         'extensions/configuration-editing/tsconfig.json',
 	'extensions/css-language-features/client/tsconfig.json',
