@@ -1,6 +1,6 @@
 {
-	"name": "Code - OSS",
-	"short_name": "Code- OSS",
+       "name": "AOSCode",
+       "short_name": "AOSCode",
 	"start_url": "/",
 	"lang": "en-US",
 	"display": "standalone",

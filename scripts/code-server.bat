@@ -1,7 +1,7 @@
 @echo off
 setlocal
 
-title VSCode Server
+title AOSCode Server
 
 set ROOT_DIR=%~dp0..
 

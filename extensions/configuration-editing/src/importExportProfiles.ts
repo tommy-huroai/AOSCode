@@ -22,11 +22,11 @@ class GitHubGistProfileContentHandler implements vscode.ProfileContentHandler {
 
 				const { Octokit } = await import('@octokit/rest');
 
-				return new Octokit({
-					request: { agent },
-					userAgent: 'GitHub VSCode',
-					auth: `token ${token}`
-				});
+                               return new Octokit({
+                                       request: { agent },
+                                       userAgent: 'GitHub AOSCode',
+                                       auth: `token ${token}`
+                               });
 			})();
 		}
 		return this._octokit;
@@ -54,7 +54,7 @@ class GitHubGistProfileContentHandler implements vscode.ProfileContentHandler {
 		if (!this._public_octokit) {
 			this._public_octokit = (async () => {
 				const { Octokit } = await import('@octokit/rest');
-				return new Octokit({ request: { agent }, userAgent: 'GitHub VSCode' });
+                               return new Octokit({ request: { agent }, userAgent: 'GitHub AOSCode' });
 			})();
 		}
 		return this._public_octokit;
