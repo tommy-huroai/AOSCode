@@ -2,6 +2,42 @@
 
 AOSCode is a Huro AI application built on the open-source [Code - OSS](https://github.com/microsoft/vscode) project. This repository contains the source for AOSCode along with customizations that enable agentic AI capabilities.
 
+## Development Setup
+
+1. Install **Node.js 18** or later and ensure `npm` is available in your `PATH`.
+2. Clone this repository and install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Launch the desktop version in development mode:
+
+   ```bash
+   ./scripts/code.sh
+   ```
+
+   The first run downloads the Electron runtime and built‑in extensions.
+
+### Building AOSCode
+
+Use the helper script to build binaries for multiple platforms:
+
+```bash
+./scripts/build-platforms.sh all
+```
+
+Individual targets (`mac`, `win`, `web`, or `ios`) can be specified in place of `all`.
+
+### Using Agents
+
+Two sample extensions demonstrate AOSCode's agentic capabilities:
+
+- **Agent IDE** – open the Command Palette and run `Agent IDE: Start Agent Development Cycle` or `Agent IDE: Open Agent Chat` to see a chain of six agents (Design, Code, Test, Review, Build, Deploy) process your prompt.
+- **AOSDev** – run `AOSDev: Open Panel` to manage agents or `AOSDev: Create Agent` to scaffold a new one. To package this extension separately execute `./scripts/build-aosdev-extension.sh`.
+
+See the [Agent Marketplace](docs/agent_marketplace.md) for additional built‑in agents.
+
 ## Ollama Integration
 
 AOSCode can run a variety of open-source models locally via [Ollama](https://ollama.com). Quick-start models include:
