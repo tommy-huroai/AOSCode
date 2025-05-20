@@ -16,6 +16,12 @@ Clone the repository and install dependencies:
 npm install
 ```
 
+You can build all supported targets (macOS, Windows, and web) with:
+
+```bash
+./scripts/build-platforms.sh all
+```
+
 ### macOS (Apple Silicon)
 
 ```bash
