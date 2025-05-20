@@ -3,8 +3,6 @@
  *--------------------------------------------------------*/
 import * as vscode from 'vscode';
 import { AOSDevPanel } from './panel';
-import * as fs from 'fs';
-import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext): void {
     const openCommand = vscode.commands.registerCommand('aosDev.openPanel', () => {
@@ -18,34 +16,42 @@ export function activate(context: vscode.ExtensionContext): void {
         }
     });
 
-    const selectAgentsCommand = vscode.commands.registerCommand('aosDev.selectAgents', async () => {
-        // Load agent list from marketplace.json packaged with the extension
-        const marketplacePath = path.join(context.extensionPath, 'marketplace.json');
-        let agents: string[] = [];
-        try {
-            const raw = fs.readFileSync(marketplacePath, 'utf8');
-            const data = JSON.parse(raw) as Array<{ name: string }>;
-            agents = data.map(a => a.name);
-        } catch (err) {
-            console.error('Failed to load marketplace.json', err);
-        }
-        if (agents.length === 0) {
-            agents = ['CEO Agent'];
-        }
+// ---- inside your activate(context: vscode.ExtensionContext) ----
 
-        const picks = await vscode.window.showQuickPick(agents, {
-            canPickMany: true,
-            placeHolder: 'Select agents for this coding task'
-        });
+const selectAgentsCommand = vscode.commands.registerCommand(
+  'aosDev.selectAgents',
+  async () => {
+    // Load agent list from marketplace.json packaged with the extension
+    const marketplacePath = path.join(context.extensionPath, 'marketplace.json');
+    let agents: string[] = [];
 
-        if (picks && picks.length > 0) {
-            vscode.window.showInformationMessage(`Assigned agents: ${picks.join(', ')}`);
-        } else {
-            vscode.window.showInformationMessage('No agents selected');
-        }
+    try {
+      const raw = fs.readFileSync(marketplacePath, 'utf8');
+      const data = JSON.parse(raw) as Array<{ name: string }>;
+      agents = data.map(a => a.name);
+    } catch (err) {
+      console.error('Failed to load marketplace.json', err);
+    }
+
+    if (agents.length === 0) {
+      agents = ['CEO Agent']; // sensible fallback
+    }
+
+    const picks = await vscode.window.showQuickPick(agents, {
+      canPickMany: true,
+      placeHolder: 'Select agents for this coding task',
     });
 
-    context.subscriptions.push(openCommand, createAgentCommand, selectAgentsCommand);
+    vscode.window.showInformationMessage(
+      picks && picks.length > 0
+        ? `Assigned agents: ${picks.join(', ')}`
+        : 'No agents selected'
+    );
+  }
+);
+
+// register every command with VS Code
+context.subscriptions.push(openCommand, createAgentCommand, selectAgentsCommand);
 }
 
 export function deactivate(): void {
