@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build the AOSDev VSCode extension
+# Build the AOSDev AOSCode extension
 set -e
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
