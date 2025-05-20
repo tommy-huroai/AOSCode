@@ -17,7 +17,11 @@ AOSCode can run a variety of open-source models locally via [Ollama](https://oll
 
 ## Development Container
 
-AOSCode includes a Dev Container configuration. Docker or Codespaces should be provisioned with at least **4 cores and 6&nbsp;GB of RAM (8&nbsp;GB recommended)** to build the project. See [.devcontainer/README.md](.devcontainer/README.md) for details.
+  AOSCode includes a Dev Container configuration. Docker or Codespaces should be provisioned with at least **4 cores and 6&nbsp;GB of RAM (8&nbsp;GB recommended)** to build the project. See [.devcontainer/README.md](.devcontainer/README.md) for details.
+
+## Distribution
+
+See [distribution instructions](docs/distribution.md) for steps to build the application for web, macOS, Windows and other platforms.
 
 ## License
 
