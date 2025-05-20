@@ -15,6 +15,12 @@ AOSCode can run a variety of open-source models locally via [Ollama](https://oll
  * **huroai/phoenixcoder** ([HuggingFace](https://huggingface.co/huro-ai/phoenixcoder), [Ollama](https://ollama.com/huroai/phoenixcoder))
 * **AOSM (custom)** – see [AOSM model training guide](docs/AOSM_model_training.md) for instructions
 
+## Agent Marketplace
+
+Browse the [Huro AI Agent Marketplace](docs/agent_marketplace.md) to discover built‑in
+agents. Each entry lists the agent's purpose and a themed logo idea so you can
+customize visuals for your workflow.
+
 ## Development Container
 
   AOSCode includes a Dev Container configuration. Docker or Codespaces should be provisioned with at least **4 cores and 6&nbsp;GB of RAM (8&nbsp;GB recommended)** to build the project. See [.devcontainer/README.md](.devcontainer/README.md) for details.
