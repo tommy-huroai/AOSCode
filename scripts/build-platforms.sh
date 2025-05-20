@@ -23,13 +23,13 @@ function ensure_deps() {
 function build_mac() {
     echo "Building AOSCode for macOS (Apple Silicon)..."
     npx gulp vscode-darwin-arm64
-    echo "macOS build available in VSCode-darwin-arm64"
+    echo "macOS build available in AOSCode-darwin-arm64"
 }
 
 function build_win() {
     echo "Building AOSCode for Windows 11..."
     npx gulp vscode-win32-x64
-    echo "Windows build available in VSCode-win32-x64"
+    echo "Windows build available in AOSCode-win32-x64"
 }
 
 function build_web() {

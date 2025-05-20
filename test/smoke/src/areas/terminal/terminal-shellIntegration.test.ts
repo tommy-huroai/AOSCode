@@ -100,7 +100,7 @@ export function setup(options?: { skipSuite: boolean }) {
 				// Erase all content and reset cursor to top
 				await terminal.runCommandWithValue(TerminalCommandIdWithValue.WriteDataToTerminal, `${csi('2J')}${csi('H')}`);
 			});
-			describe('VS Code sequences', () => {
+                    describe('AOS Code sequences', () => {
 				it('should handle the simple case', async () => {
 					await terminal.runCommandWithValue(TerminalCommandIdWithValue.WriteDataToTerminal, `${vsc('A')}Prompt> ${vsc('B')}exitcode 0`);
 					await terminal.assertCommandDecorations({ placeholder: 1, success: 0, error: 0 });

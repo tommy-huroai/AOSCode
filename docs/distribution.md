@@ -28,7 +28,7 @@ You can build all supported targets (macOS, Windows, and web) with:
 # Build the application for macOS ARM64
 npx gulp vscode-darwin-arm64
 
-# The signed application will appear in `VSCode-darwin-arm64` in the project root.
+# The signed application will appear in `AOSCode-darwin-arm64` in the project root.
 ```
 
 To create a universal build (combining x64 and ARM64), run:
@@ -44,7 +44,7 @@ node build/darwin/create-universal-app.js .build
 ```powershell
 # From an elevated PowerShell prompt
 npx gulp vscode-win32-x64
-# Output will be in `VSCode-win32-x64`
+# Output will be in `AOSCode-win32-x64`
 ```
 
 For ARM64 builds use `vscode-win32-arm64` instead of `vscode-win32-x64`.
@@ -68,7 +68,7 @@ AOSCode does not currently ship a native iOS application. You can access AOSCode
 After running the platform-specific build tasks, the resulting directory can be zipped or packaged using standard tools. For example on macOS:
 
 ```bash
-zip -r AOSCode-macOS.zip VSCode-darwin-arm64
+zip -r AOSCode-macOS.zip AOSCode-darwin-arm64
 ```
 
 For Windows you can create an installer using [Inno Setup](https://jrsoftware.org/isinfo.php) or distribute the ZIP archive directly.

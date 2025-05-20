@@ -238,8 +238,8 @@ app.on('ready', () => {
 		return {
 			product: {
 				version: '1.x.y',
-				nameShort: 'Code - OSS Dev',
-				nameLong: 'Code - OSS Dev',
+                               nameShort: 'AOSCode',
+                               nameLong: 'AOSCode by Huro AI, Inc - developed by Tommy Xaypanya, Chief AI Officer 2025',
 				applicationName: 'code-oss',
 				dataFolderName: '.vscode-oss',
 				urlProtocol: 'code-oss',
@@ -255,7 +255,7 @@ app.on('ready', () => {
 		width: 800,
 		show: false,
 		webPreferences: {
-			preload: path.join(__dirname, 'preload.js'), // ensure similar environment as VSCode as tests may depend on this
+                       preload: path.join(__dirname, 'preload.js'), // ensure similar environment as AOSCode as tests may depend on this
 			additionalArguments: [`--vscode-window-config=vscode:test-vscode-window-config`],
 			nodeIntegration: true,
 			contextIsolation: false,
