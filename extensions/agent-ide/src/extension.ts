@@ -1,7 +1,7 @@
-/*---------------------------------------------------------
- * Agent IDE Extension - Demonstrates a simple agent based
- * development cycle consisting of six agents.
- *--------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 import * as vscode from 'vscode';
 import { ChatPanel } from './chatPanel';
 

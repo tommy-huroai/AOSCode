@@ -1,3 +1,7 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
 import * as vscode from 'vscode';
 
 export class ChatPanel {
@@ -99,7 +103,7 @@ async function callOllama(prompt: string): Promise<string> {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ model: 'huroai/huroai-agent', prompt, stream: false })
         });
-        const data = await res.json();
+        const data = await res.json() as { response?: string };
         return data.response ?? '';
     } catch (err) {
         console.error(err);
