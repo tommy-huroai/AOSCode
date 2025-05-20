@@ -1,0 +1,31 @@
+{
+  "name": "local-indexer",
+  "displayName": "Local Indexer",
+  "description": "Index workspace files using local embeddings for semantic search",
+  "version": "0.0.1",
+  "publisher": "vscode",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "activationEvents": [
+    "onCommand:localIndexer.buildIndex",
+    "onCommand:localIndexer.searchIndex"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "localIndexer.buildIndex",
+        "title": "Local Indexer: Build Index"
+      },
+      {
+        "command": "localIndexer.searchIndex",
+        "title": "Local Indexer: Search Index"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "gulp compile-extension:local-indexer",
+    "watch": "gulp watch-extension:local-indexer"
+  }
+}

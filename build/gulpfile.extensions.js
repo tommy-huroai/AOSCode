@@ -30,6 +30,7 @@ const ext = require('./lib/extensions');
 const compilations = [
         'extensions/aos-dev/tsconfig.json',
         'extensions/agent-ide/tsconfig.json',
+        'extensions/local-indexer/tsconfig.json',
         'extensions/configuration-editing/tsconfig.json',
 	'extensions/css-language-features/client/tsconfig.json',
 	'extensions/css-language-features/server/tsconfig.json',
