@@ -164,7 +164,7 @@ pub struct StandaloneUpdateArgs {
 #[derive(Subcommand, Debug, Clone)]
 
 pub enum Commands {
-	/// Create a tunnel that's accessible on vscode.dev from anywhere.
+	/// Create a tunnel that's accessible on aoscode.dev from anywhere.
 	/// Run `code tunnel --help` for more usage info.
 	Tunnel(TunnelArgs),
 
@@ -178,7 +178,7 @@ pub enum Commands {
 	/// Changes the version of the editor you're using.
 	Version(VersionArgs),
 
-	/// Runs a local web version of VS Code.
+	/// Runs a local web version of AOS Code.
 	#[clap(about = concatcp!("Runs a local web version of ", constants::PRODUCT_NAME_LONG))]
 	ServeWeb(ServeWebArgs),
 
@@ -322,7 +322,7 @@ pub struct InstallExtensionArgs {
 	/// Either an extension id or a path to a VSIX. The identifier of an
 	/// extension is '${publisher}.${name}'. Use '--force' argument to update
 	/// to latest version. To install a specific version provide '@${version}'.
-	/// For example: 'vscode.csharp@1.2.3'.
+	/// For example: 'aoscode.csharp@1.2.3'.
 	#[clap(name = "ext-id | id")]
 	pub id_or_path: Vec<String>,
 

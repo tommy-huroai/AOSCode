@@ -1,6 +1,6 @@
 {
-	"nameShort": "Code - OSS",
-	"nameLong": "Code - OSS",
+       "nameShort": "AOSCode",
+       "nameLong": "AOSCode by Huro AI, Inc - developed by Tommy Xaypanya, Chief AI Officer 2025",
 	"applicationName": "code-oss",
 	"dataFolderName": ".vscode-oss",
 	"win32MutexName": "vscodeoss",
