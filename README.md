@@ -11,8 +11,9 @@ AOSCode can run a variety of open-source models locally via [Ollama](https://oll
 * **huroai/beehuroai** ([HuggingFace](https://huggingface.co/huro-ai/beehuroai), [Ollama](https://ollama.com/huroai/beehuroai))
 * **huroai/little-huro** ([HuggingFace](https://huggingface.co/huro-ai/little-huro), [Ollama](https://ollama.com/huroai/little-huro))
 * **huroai/beehuroai-vision** ([HuggingFace](https://huggingface.co/huro-ai/beehuroai-vision), [Ollama](https://ollama.com/huroai/beehuroai-vision))
-* **huroai/huroai-agent** ([HuggingFace](https://huggingface.co/huro-ai/huroai-agent), [Ollama](https://ollama.com/huroai/huroai-agent))
-* **huroai/phoenixcoder** ([HuggingFace](https://huggingface.co/huro-ai/phoenixcoder), [Ollama](https://ollama.com/huroai/phoenixcoder))
+ * **huroai/huroai-agent** ([HuggingFace](https://huggingface.co/huro-ai/huroai-agent), [Ollama](https://ollama.com/huroai/huroai-agent))
+ * **huroai/phoenixcoder** ([HuggingFace](https://huggingface.co/huro-ai/phoenixcoder), [Ollama](https://ollama.com/huroai/phoenixcoder))
+* **AOSM (custom)** – see [AOSM model training guide](docs/AOSM_model_training.md) for instructions
 
 ## Development Container
 
