@@ -18,5 +18,7 @@ Run the helper script from the repository root to install dependencies, compile,
 ```bash
 ./scripts/build-aosdev-extension.sh
 ```
-
 The script will compile the TypeScript sources and produce an `aos-dev.vsix` file inside the extension directory.
+
+- **AOSDev: Select Agents** – Choose from a list of predefined AOSCode agents. Supports multi-select to assign multiple agents to a task.
+

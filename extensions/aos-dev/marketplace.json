@@ -1,0 +1,82 @@
+[
+  {
+    "name": "CEO Agent",
+    "role": "Executive decision-making & oversight",
+    "logo": "Executive suit icon in deep purple"
+  },
+  {
+    "name": "COO Agent",
+    "role": "Operational management and efficiency",
+    "logo": "Gears and flowchart in green shades"
+  },
+  {
+    "name": "CTO Agent",
+    "role": "Technology strategy and innovation",
+    "logo": "Circuit board and light bulb in blue"
+  },
+  {
+    "name": "CFO Agent",
+    "role": "Financial planning and compliance",
+    "logo": "Dollar sign and ledger in gold"
+  },
+  {
+    "name": "CMO Agent",
+    "role": "Marketing strategy and consumer engagement",
+    "logo": "Megaphone and analytics in orange"
+  },
+  {
+    "name": "TechWorker",
+    "role": "Technical task execution & diagnostics",
+    "logo": "Screwdriver and wrench in teal"
+  },
+  {
+    "name": "SupportBot",
+    "role": "Customer support and communication",
+    "logo": "Chat bubble and headset in sky blue"
+  },
+  {
+    "name": "EscalationBot",
+    "role": "Handling escalations and human intervention",
+    "logo": "Alarm bell icon in red"
+  },
+  {
+    "name": "RefundAgent",
+    "role": "Transaction management (refund processing)",
+    "logo": "Credit card with reverse arrow green"
+  },
+  {
+    "name": "Compliance",
+    "role": "Policy enforcement and compliance checks",
+    "logo": "Shield and checkmark in silver/grey"
+  },
+  {
+    "name": "SecurityAuditor",
+    "role": "Security assessments and vulnerability scanning",
+    "logo": "Lock and scanner icon in dark red"
+  },
+  {
+    "name": "ProjectManager",
+    "role": "Project timelines and resource management",
+    "logo": "Clipboard and timeline in navy blue"
+  },
+  {
+    "name": "TaskRouter",
+    "role": "Task distribution and workload management",
+    "logo": "Route arrows icon in dark purple"
+  },
+  {
+    "name": "Development Team",
+    "role": "Software development and maintenance",
+    "logo": "Code brackets in neon blue"
+  },
+  {
+    "name": "Design Team",
+    "role": "UI/UX design and prototyping",
+    "logo": "Paintbrush and palette in coral"
+  },
+  {
+    "name": "Quality Assurance",
+    "role": "Testing and validation of systems/software",
+    "logo": "Magnifying glass & checkmark in lime"
+  }
+]

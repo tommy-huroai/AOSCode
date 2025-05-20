@@ -9,7 +9,8 @@
   },
   "activationEvents": [
     "onCommand:aosDev.openPanel",
-    "onCommand:aosDev.createAgent"
+    "onCommand:aosDev.createAgent",
+    "onCommand:aosDev.selectAgents"
   ],
   "main": "./out/extension",
   "contributes": {
